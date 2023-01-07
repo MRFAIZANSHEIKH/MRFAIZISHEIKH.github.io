@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <style>
+        .slideframe{
+            border: 1px solid green;
+            width: 100%;
+            /* overflow: hidden; */
+            position:relative;
+        
+        }
+        .slidecontainer{
+            height: 90vh;
+            width: 300%;
+            border: 1px solid red;
+            /* display: flex; */
+            transition: all 1s linear;
+            /* position: relative; */
+            
+        }
+        .slide{
+            width:calc(33.33% - 25px) ;
+            box-sizing: border-box;
+            margin:10px;
+            /* margin-top: 50px; */
+            height: 85%;
+            border-radius: 30px;
+            border: 1px solid #000;
+            float: left;
+        }
+        .slide1{
+         background-color: black;
+         /* background-position: center; */
+        }
+        .slide2{
+         background-color:black;
+         /* background-position: center; */
+         border: 3px solid rebeccapurple;
+        }
+        .slide3{
+         background-color: black;
+         /* background-position: center;; */
+            
+        }
+        #one:checked~.slidecontainer .slide{
+            margin-left: -100%;
+            /* visibility: hidden; */
+        }
+        #one:checked~.slidecontainer .slide1{
+            margin-left: 0%;
+            visibility: visible;
+            transition: all .30s linear;
+        }
+        #two:checked~.slidecontainer{
+            margin-left: -100%;
+            visibility: visible;
+        }
+        /* #two:checked~.slidecontainer .slide{
+            visibility: hidden;
+        } */
+        #two:checked~.slidecontainer .slide2{
+            visibility: visible;
+        }
+        #three:checked~.slidecontainer{
+            margin-left: -200%;
+        }
+        /* #three:checked~.slidecontainer .slide{
+            visibility: hidden;
+        } */
+        #three:checked~.slidecontainer .slide3{
+            visibility: visible;
+            /* transition: all .30s linear; */
+        }
+.gp{
+    position: absolute;
+    top: 650px;
+    left: 220px;
+}
+.gl{
+    position: absolute;
+    top: 650px;
+    left: 260px;
+}   
+.gh{
+    position: absolute;
+    top: 650px;
+    left: 300px;
+}   
+
+
+    </style>
+</head>
+<body>
+    <div class="slideframe">
+        <input type="radio" name="btn" id="one" class="gp">
+        <input type="radio" name="btn" id="two" class="gl">
+        <input type="radio" name="btn" id="three" class="gh">
+       
+        
+        
+    <div class="slidecontainer">
+        
+        
+        <div class="slide slide1">
+            <video  width="100%" height="100%" autoplay muted src="./s/MS-v1.mp4"></video>
+        </div>
+            
+        <div class="slide slide2">
+            <video  width="100%" height="100%" autoplay muted src="./s/MS-v2.mp4"></video>
+            
+        </div>
+        <div class="slide slide3"> 
+            <video  width="100%" height="100%" autoplay muted src="./s/MS-v10.mp4"></video>
+
+
+        </div>
+    </div>
+    <h1>Console-Grade Gaming</h1>
+</div>
+
+    
+</body>
+</html>
